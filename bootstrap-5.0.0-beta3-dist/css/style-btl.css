@@ -1,0 +1,129 @@
+﻿
+.web{
+    width: 1914px;
+    height: auto;
+    margin: -8px;
+    padding: 0px;
+}
+.add{
+    width: 1443px;
+    height: 47px;
+    text-align: center;
+    position: sticky;
+    margin: auto;
+
+}
+.hotline{
+    width: 1920px;
+    height: 36px;
+    color: white;
+    background-color: #005ec4;
+    display: flex;
+}
+.sdt{
+    width: 1110px;
+    margin: auto;
+    text-align: right;
+    background-color: #005ec4;
+    line-height: 16px;
+}
+.container1{
+    width:1110px;
+    height: 70px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+.giohang{
+    display: flex;
+    align-items: center;
+}
+.giohang1{
+    width: 583px;
+    position: relative;
+}
+.giohang input[type=text]{
+    width: 583px;
+    height: 38px;
+    border: 1px solid #005ec4;
+    padding: 5px 5px 5px 32px;
+    outline: none;
+    float: left;
+}
+.giohang1 .timkiem{
+    position: absolute;
+    right: -40px;
+    top : 1px;
+    z-index: 1;
+}
+.vatpham{
+    margin :13px;
+    padding: 10px;
+    display: flex;
+    background: #29324e;
+    align-items: center;
+
+}
+.vatpham-icon{
+    margin-right: 25px;
+}
+.dem{
+    display: flex;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    background: #fff200;
+}
+.menu-top{
+    width: 100%;
+    background: #eef0f7;
+    line-height: 19px;
+}
+.menu-top ul{
+    display: flex;
+    float: left;
+    padding:0px;
+}
+.menu-top li{
+    list-style: none;
+}
+.menu-top .container2 .container2-left a{
+    text-decoration: none;
+    color: #29324e;
+    padding: 17px 16px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: Helvetica;
+}
+
+.container2{
+    width: 1110px;
+    height: 51px;
+    background: #eef0f7;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+
+}
+.container2-left{
+    width: 900px;
+    height: 51px;
+}
+.container2-right {
+    width: 142px;
+    height: 30px;
+    margin: auto;
+    margin-right: 0px;
+    display: inline-block;
+}
+.container2-right a{
+    margin-left: 20px;      
+}
+
+.text1{
+    margin : 0px 15px;
+}
+

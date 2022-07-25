@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>PC Store</title>
+	<meta http-equiv="Content-Type" content="text/shtml; charset=utf-8" />
+	<link rel="icon" href="./images/logo.jpg" type="image/png" />
+	<link type="text/css" href="./Baitaplon.css" rel="stylesheet" media="screen"/>
+    <link href="./fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet">
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+$(document).ready(function() {
+    $('.next').click(function(event) {
+        var slide_sau = $('.active').next();
+        if(slide_sau.length!=0){
+            $('.active').addClass('bien-mat-ben-trai').one('webkitAnimationEnd', function(event) {
+                $('.bien-mat-ben-trai').removeClass('bien-mat-ben-trai').removeClass('active');
+            });
+            slide_sau.addClass('active').addClass('di-vao-ben-phai').one('webkitAnimationEnd', function(event) {
+                $('.di-vao-ben-phai').removeClass('di-vao-ben-phai');
+            });
+        }
+        else{
+            $('.active').addClass('bien-mat-ben-trai').one('webkitAnimationEnd', function(event) {
+                $('.bien-mat-ben-trai').removeClass('bien-mat-ben-trai').removeClass('active');
+            });
+            $('.slide:first-child').addClass('active').addClass('di-vao-ben-phai').one('webkitAnimationEnd', function(event) {
+                $('.di-vao-ben-phai').removeClass('di-vao-ben-phai');
+            });
+        }
+    });
+    
+    $('.prev').click(function(event) {
+        var slide_truoc = $('.active').prev();
+        if(slide_truoc.length!=0){
+            $('.active').addClass('bien-mat-ben-phai').one('webkitAnimationEnd', function(event) {
+                $('.bien-mat-ben-phai').removeClass('bien-mat-ben-phai').removeClass('active');
+            });
+            slide_truoc.addClass('active').addClass('di-vao-ben-trai').one('webkitAnimationEnd', function(event) {
+                $('.di-vao-ben-trai').removeClass('di-vao-ben-trai');
+            });
+            }
+        else{
+            $('.active').addClass('bien-mat-ben-phai').one('webkitAnimationEnd', function(event) {
+                $('.bien-mat-ben-phai').removeClass('bien-mat-ben-phai').removeClass('active');
+            });
+            $('.slide:last-child').addClass('active').addClass('di-vao-ben-trai').one('webkitAnimationEnd', function(event) {
+                $('.di-vao-ben-trai').removeClass('di-vao-ben-trai');
+            });
+            }
+    });
+    var modal = document.getElementById("id01");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+        modal.style.display = "table";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+    </script>
+</head>
+
+<body>
+    <div class="web">
+        <div class="quangcao">
+            <a href="./Baitaplon.html" ><img src="./images/bia.jpg"></a>
+        </div>
+        <header class="header">
+            <div class="hotline">
+                <div class="sdt">
+                    Hotline : 0123456789 • Email: abcxyz@gmail.com
+                </div>
+            </div>
+            <div class="container1">
+                <div class ="logo">
+                    <a href="./Baitaplon.html"><img src="./images/tnc-logo.svg" width="194px" height="70px"></a>
+                </div>
+                <div class ="giohang">
+                    <div class="giohang1">
+                        <input type="text" placeholder="Nhập sản phẩm cần tìm..."/>
+                        <div class ="timkiem">
+                            <img src="./images/search-icon.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="vatpham">
+                    <div class="vatpham-icon">
+                        <img src="./images/cart-icon.svg">
+                    </div>
+                    <div class ="dem">0</div>
+                </div>
+            </div>
+            <div class="menu-top">
+                <div class="container2">
+                    <div class="container2-left">
+                        <ul>
+                            <div class="dropdown"> <li><a href="#"><i class="fas fa-desktop"></i><span style="margin: 0px 15px">DANH MỤC SẢN PHẨM</span><i class="fas fa-caret-down"></i></a></li>
+                                <div class="dropdown-content">
+                                    <a href="#">LAPTOPS<i class="fas fa-angle-right"></i></a>
+                                    <a href="#">MACBOOK<i class="fas fa-angle-right"></i></a>
+                                    <a href="#">GAMING GEARS<i class="fas fa-angle-right"></i></a>
+                                    <a href="#">AUDIO<i class="fas fa-angle-right"></i></a>
+                                    <a href="#">MÀN HÌNH<i class="fas fa-angle-right"></i></a>
+                                    <a href="#">THIẾT BỊ MẠNG<i class="fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                            <li><a href="#"><i class="fas fa-cogs"></i><span style="margin: 0px 15px">XÂY DỰNG CẤU HÌNH</span></a></li>
+                            <li><a href="#"><i class="fas fa-tags"></i><span class="text1" >SALE-GAMING GEAR</span></a></li>
+                            <li><a href="#"><i class="fas fa-newspaper"></i><span style="margin: 0px 15px">TIN TỨC</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="container2-right">
+                        <a href="./Dangnhap.html"><span class="dangnhap"><i class="fas fa-user-circle"></span></i></a>
+                        <a href="#"><img src="./images/fb-icon.svg"></a>
+                        <a href="#"><img src="./images/yt-icon.svg"></a>
+                        <a href="#"><img src="./images/instagram-icon.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="khung-slide">
+            <div class="cac-slide">
+                <div class="slide active"><a href="#"><img src="./images/slide/1.png.jpg" width="1110px" height="445px"></a></div>
+                <div class="slide"><a href="#"><img src="./images/slide/159867382_454618965783776_846292436573268100_n.png" width="1110px" height="445px"></a></div>
+                <div class="slide"><a href="#"><img src="./images/slide/161684733_774956046736523_3101110702919837642_n.png" width="1110px" height="445px"></a></div>
+                <div class="slide"><a href="#"><img src="./images/slide/163563426_254828549681978_5749766141429570072_n.png" width="1110px" height="445px"></a></div>
+                <div class="slide"><a href="#"><img src="./images/slide/164353134_456080909045902_1572593329548578445_n (1).jpg" width="1110px" height="445px"></a></div>
+                <div class="slide"><a href="#"><img src="./images/slide/165159694_139550131363965_383056626153769272_n.png" width="1110px" height="445px"></a></div>
+                <div class="slide"><a href="#"><img src="./images/slide/BANNER CAMP T3 2021_WEB - MAIN BANNER.jpg" width="1110px" height="445px"></a></div>
+                <div class="slide"><a href="#"><img src="./images/slide/banner15032021.png" width="1110px" height="445px"></a></div>
+                <div class="slide"><a href="#"><img src="./images/slide/banner29032021.jpg" width="1110px" height="445px"></a></div>
+                <div class="slide"><a href="#"><img src="./images/slide/Z590-Cooler-promotion-March-2021-1900x684px (1).jpg" width="1110px" height="445px"></a></div>
+            </div>
+            <div class ="nut-slide">
+                <div class="prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="next"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+        <div class="danhmuc">
+            <div class="title">
+                <div class="title1">
+                    <div class="title2">DANH MỤC SẢN PHẨM</div>
+                </div>
+            </div>
+            <div class="khungdm">
+                <div class="sanpham pc">
+                    <div class="add">
+                        <div class="adds"></div>
+                        <img src="./images/danh muc sp/gaming-workstation.png" width="120px" height="100px">    
+
+                    </div>
+                    <div class="text">
+                        GAMING
+                        </br>
+                        WORKSTATION
+                        </br>
+                        PC
+                    </div>
+                </div>
+                <div class="sanpham laptop">
+                    <div class="add">
+                        <div class="adds"></div>
+                        <img src="./images/danh muc sp/gaming-laptop.png" width="167px" height="100px">
+                    </div>
+                    <div class="text">
+                        GAMING
+                        </br>
+                        LAPTOP
+                    </div>
+                </div>
+                <div class="sanpham gear">
+                    <div class="add">
+                        <div class="adds"></div>
+                        <img src="./images/danh muc sp/gaming-gear.png" width="114px" height="88px">
+                    </div>
+                    <div class="text">
+                        GAMING GEAR
+                    </div>
+                </div>
+                <div class="sanpham fan">
+                    <div class="add">
+                        <div class="adds"></div>
+                        <img src="./images/danh muc sp/phu-kien.png" width="102px" height="100px">
+                    </div>
+                    <div class="text">
+                        PHỤ KIỆN
+                        </br>
+                        TẢN NHIỆT PC
+                    </div>
+                </div>
+                <div class="sanpham pk">
+                    <div class="add">
+                        <div class="adds"></div>
+                        <img src="./images/danh muc sp/linh-kien.png" width="142px" height="88px">
+                    </div>
+                    <div class="text">
+                        LINH KIỆN
+                        </br>
+                        MÁY TÍNH
+                    </div>
+                </div>
+                <div class="sanpham man">
+                    <div class="add">
+                        <div class="adds"></div>
+                        <img src="./images/danh muc sp/man-hinh.png" width="130px" height="88px">
+                    </div>
+                    <div class="text">
+                        MÀN HÌNH
+                        </br>
+                        MÁY TÍNH
+                    </div>
+                </div>
+                <div class="sanpham ghe">
+                    <div class="add">
+                        <div class="adds"></div>
+                        <img src="./images/danh muc sp/ban-ghe.png" width="131px" height="120px">
+                    </div>
+                    <div class="text">
+                        BÀN GHẾ
+                        </br>
+                        GAMING
+                    </div>
+                </div>
+                <div class="sanpham mang">
+                    <div class="add">
+                        <div class="adds"></div>
+                        <img src="./images/danh muc sp/thiet-bi-mang.png" width="131px" height="69px">
+                    </div>
+                    <div class="text">
+                        THIẾT BỊ MẠNG
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spgiamgia">
+            <div class="title">
+                <div class="title1">
+                    <div class="title2">SẢN PHẨM GIẢM GIÁ</div>
+                </div>
+            </div>
+            <div class="giamgia">
+                <div class="khung-gg">
+                    <div class="product man">
+                        <div class="percent">-6%</div>
+                        <div class="product-thumb">
+                            <a href="./Chitiet.html"><img src="./images/giamgia/giamgia1.jpg"></a>
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-title">
+                                <a href="#">Màn Hình Gaming LG 32GP850-B Nano IPS/2K/165Hz</a>
+                            </div>
+                            <div class="product-rate">0 đánh giá</div>
+                            <div class="product-price">
+                                <div class="price-selling">13.590.000 đ</div>
+                                <div class="price-old">14.490.000 đ</div>
+                            </div>
+                            <button type="button" class="them">MUA NGAY</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="khung-gg">
+                    <div class="product card">
+                        <div class="percent">-29%</div>
+                        <div class="product-thumb">
+                            <a href="#"><img src="./images/giamgia/giamgia2.png"></a>
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-title">
+                                <a href="#">Card Mạng PCI-E Wifi 6 Asus AX3000</a>
+                            </div>
+                            <div class="product-rate">0 đánh giá</div>
+                            <div class="product-price">
+                                <div class="price-selling">990.000 đ</div>
+                                <div class="price-old">1.390.000 đ</div>
+                            </div>
+                            <button type="button" class="them">MUA NGAY</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="khung-gg">
+                    <div class="product banphim">
+                        <div class="percent">-14%</div>
+                        <div class="product-thumb">
+                            <a href="#"><img src="./images/giamgia/giamgia3.jpg"></a>
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-title">
+                                <a href="#">Bàn Phím Cơ Bluetooth Keychron K3 Led RGB - Blue Switch</a>
+                            </div>
+                            <div class="product-rate">0 đánh giá</div>
+                            <div class="product-price">
+                                <div class="price-selling">1.890.000 đ</div>
+                                <div class="price-old">2.190.000 đ</div>
+                            </div>
+                            <button type="button" class="them">MUA NGAY</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="khung-gg">
+                    <div class="product laptop">
+                        <div class="percent">-4%</div>
+                        <div class="product-thumb">
+                            <a href="#"><img src="./images/giamgia/giamgia4.png"></a>
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-title">
+                                <a href="#">Laptop MSI Modern 14 B10MW 483VN i3 10110U/ 8GB RAM/ 256GB SSD/ 14.0inch FHD/ Win10</a>
+                            </div>
+                            <div class="product-rate">0 đánh giá</div>
+                            <div class="product-price">
+                                <div class="price-selling">13.490.000 đ</div>
+                                <div class="price-old">13.990.000 đ</div>
+                            </div>
+                            <button type="button" class="them">MUA NGAY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xemthem">
+                <a href="#">XEM THÊM</a>
+            </div>
+        </div>
+        <div class="spnoibat">
+            <div class="title">
+                <div class="title1">
+                    <div class="title2">SẢN PHẨM NỔI BẬT</div>
+                </div>
+            </div>
+            <div class="noibat">
+                <div class="noibat1">
+                    <a href="#"><img src="./images/noibat/noibat1.jpg" width="255px" height="255px"></a>
+                    <a href="#"><img src="./images/noibat/noibat2.jpg" width="255px" height="255px"></a>
+                    <a href="#"><img src="./images/noibat/noibat3.jpg" width="255px" height="255px"></a>
+                    <a href="#"><img src="./images/noibat/noibat4.jpg" width="255px" height="255px"></a>
+                </div>
+                <div class="noibat2">
+                    <a href="#"><img src="./images/noibat/noibat5.jpg" width="540px" height="540px"></a>
+                </div>
+            </div>
+            <div class="xemthem">
+                <a href="#">XEM THÊM</a>
+            </div>
+        </div>
+        <div class="channel">
+            <div class="title">
+                <div class="title1">
+                    <div class="title2">TNC CHANNEL</div>
+                </div>
+            </div>
+            <div class="channel1">
+                <div class="yt1">
+                    <div class="video">
+                        <img src="./images/youtube/youtube1.jpg" width="100%">
+                        <div class="nut"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="tieude">
+                        <a href="#">Góc nhìn Acer: Niềm hạnh phúc trong thời đại khủng hoảng</a>
+                    </div>
+                </div>
+                <div class="yt2">
+                    <div class="clip a">
+                        <img src="./images/youtube/youtube2.jpg" width="160px" height="80px">
+                        <div class="play"><i class="fab fa-youtube"></i></div>
+                        <a href="#">Thiếu hụt chip màn hình: “Tử huyệt” của khủng hoảng linh kiện bán dẫn?</a>
+                    </div>
+                    <div class="clip b">
+                        <img src="./images/youtube/youtube3.jpg" width="160px" height="106.52px">
+                        <div class="play"><i class="fab fa-youtube"></i></div>
+                        <a href="#">Core i9-11900K review: Liệu đã đến lúc Intel chia tay chip 14nm?</a>
+                    </div>
+                    <div class="clip c">
+                        <img src="./images/youtube/youtube4.png" width="160px" height="101.25px">
+                        <div class="play"><i class="fab fa-youtube"></i></div>
+                        <a href="#">Nvidia và AMD củng cố vị thế trong làng công nghệ với mức tăng trưởng chóng mặt</a>
+                    </div>
+                    <div class="clip d">
+                        <img src="./images/youtube/youtube5.jpg" width="160px" height="93.8px">
+                        <div class="play"><i class="fab fa-youtube"></i></div>
+                        <a href="#">Hé lộ giao diện mới của Windows 10: Vừa đơn giản hơn, vừa… đa dạng hơn	</a>
+                    </div>
+                </div>
+            </div>
+            <div class="xemthem">
+                <a href="#">Xem Thêm video</a>
+            </div>
+        </div>
+        <div class="gioithieu">
+            <div class="title">
+                <div class="title1">
+                    <div class="title2">GIỚI THIỆU VỀ TNC</div>
+                </div>
+            </div>
+            <div class="gt-text">
+                <div class="intro">
+                    <div class="intro1">Nhà cung cấp linh kiện & dịch vụ máy tính, gaming số 1 miền Bắc.</div>
+                    Với đội ngũ nhân viên là những người trẻ đam mê và yêu thích về công nghệ, cùng kiến thức về IT tốt kèm với sự dày dặn kinh nghiệm, chúng tôi luôn sẵn sàng giải đáp bất cứ thắc mắc của các khách hàng một cách nhanh nhất có thể. Dù bạn không mua, chúng tôi vẫn tư vấn cho bạn.
+                </div>
+                <div class="img">
+                    <img src="./images/tnc-img-1.png">
+                    <button id="myBtn"><img src="./images/btn-yt-blue.png"></button>
+                    <div id="id01" class="modal">
+                        <div class="modal-wrapper">
+                            <div class="modal-container">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/ucIhNY0gCgo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feedback">
+            <div class="title">
+                <div class="title1">
+                    <div class="title2">ĐÁNH GIÁ KHÁCH HÀNG</div>
+                </div>
+            </div>
+            <div class="customers-feed">
+                <div class="customers">
+                    <div class="customer"><img src="./images/customers/1 (1).jpg" width="1110px" height="287px"></div>
+                    <div class="customer"><img src="./images/customers/2 (1).jpg" width="1110px" height="287px"></div>
+                    <div class="customer"><img src="./images/customers/3.jpg" width="1110px" height="287px"></div>
+                    <div class="customer"><img src="./images/customers/4.jpg" width="1110px" height="287px"></div>
+                    <div class="customer"><img src="./images/customers/5.jpg" width="1110px" height="287px"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-container">
+                    <div class="f-links">
+                        <div class="links">
+                            <div class="links-title">Thông tin chung</div>
+                            <p><a href="#">Giới thiệu TNC Store</a></p>
+                            <p><a href="#">Tuyển dụng</a></p>
+                            <p><a href="#">Tin tức</a></p>
+                            <p><a href="#">Ý kiến khách hàng</a></p>
+                            <p><a href="#">Liện hệ hợp tác</a></p>
+                        </div>
+                        <div class="links">
+                            <div class="links-title">Chính sách chung</div>
+                            <p><a href="#">Quy định chung</a></p>
+                            <p><a href="#">Chính sách vận chuyển</a></p>
+                            <p><a href="#">Chính sách bảo hành</a></p>
+                            <p><a href="#">Chính sách đổi, trả lại hàng</a></p>
+                            <p><a href="#">Chính sách cho doanh nghiệp</a></p>
+                        </div>
+                        <div class="links">
+                            <div class="links-title">Thông tin khuyến mãi</div>
+                            <p><a href="#">Sản phẩm bán chạy</a></p>
+                            <p><a href="#">Sản phẩm khuyến mãi</a></p>
+                            <p><a href="#">Hàng thanh lý</a></p>
+                        </div>
+                        <div class="links">
+                            <div class="links-title">Follow us!</div>
+                            <div class="social">
+                              <a href="#"><img src="./images/store-info/facebook.png"></a>
+                              <a href="#"><img src="./images/store-info/youtube.png"></a>
+                              <a href="#"><img src="./images/store-info/twitter.png"></a>
+                              <a href="#"><img src="./images/store-info/instagram.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="store-info">
+                        <div class="links-title">Công ty TNHH Thương mại & Tin học Tú Nguyệt</div>
+                        <p>Showroom : 172 Lê Thanh Nghị, Phường Đồng Tâm, Quận Hai Trưng, Hà Nội / Tel: (024) 36288790 Fax : (024) 36288790</p>
+                        <p>Trung tâm bảo hành : 172 Lê Thanh Nghị, Phường Đồng Tâm, Quận Hai Trưng, Hà Nội / Tel: (04) 36288790 Fax : (024) 36288790</p>
+                        <p>Trụ sở (Không bán hàng): 11 Vũ Thạnh - Cát Linh - Đống Đa - Hà Nội / Tel: (024) 35120778; Fax : (024) 36288790</p>
+                        <a href="#"><img src="./images/store-info/_dmca_premi_badge_2.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-container">
+                    <div class="copy-right">© 2020 - Bản quyền của Công ty TNHH Thương mại & Tin học Tú Nguyệt</div>
+                    <div class="bottom-icon">
+                        <a href="#"><img src="./images/bottom-icon/tien-mat.png"></a>
+                        <a href="#"><img src="./images/bottom-icon/internet-bank.png"></a>
+                        <a href="#"><img src="./images/bottom-icon/mastercard.png"></a>
+                        <a href="#"><img src="./images/bottom-icon/visa.png"></a>
+                        <a href="#"><img src="./images/bottom-icon/bo-cong-thuong.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
